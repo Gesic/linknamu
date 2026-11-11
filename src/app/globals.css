@@ -1,7 +1,28 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: "Pretendard Variable", Pretendard, "Apple SD Gothic Neo",
+    "Malgun Gothic", system-ui, sans-serif;
+
+  /* 차가운 톤 팔레트 */
+  --color-bg-top: #f8fafd;
+  --color-bg-mid: #ecf2fb;
+  --color-bg-bottom: #dde7f6;
+  --color-glow-sky: #b9d3f5;
+  --color-glow-lavender: #d3cbf3;
+  --color-glow-mint: #c4e4ec;
+  --color-ink: #27303f;
+  --color-ink-soft: #687287;
+}
+
+html {
+  color-scheme: light;
+}
+
 body {
-  background: #ffffff;
-  color: #171717;
-  font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  background: linear-gradient(170deg, var(--color-bg-top) 0%, var(--color-bg-mid) 45%, var(--color-bg-bottom) 100%);
+  background-attachment: fixed;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
 }
