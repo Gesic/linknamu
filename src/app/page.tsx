@@ -1,5 +1,5 @@
 import ProfileHeader from "@/components/ProfileHeader";
-import LinkCard from "@/components/LinkCard";
+import LinkList from "@/components/LinkList";
 import { profile } from "@/data/profile";
 
 // 와이어프레임 배치: 위쪽은 프로필(사진, 이름, 한 줄 소개), 아래쪽은 링크 카드 세로 목록
@@ -24,13 +24,7 @@ export default function Home() {
           imageCircle={profile.imageCircle}
         />
 
-        <ul className="mt-12 flex w-full flex-col gap-4 sm:gap-5">
-          {profile.links.map((link) => (
-            <li key={link.id}>
-              <LinkCard title={link.title} url={link.url} />
-            </li>
-          ))}
-        </ul>
+        <LinkList links={profile.links} />
       </div>
     </main>
   );
